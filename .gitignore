@@ -18,6 +18,7 @@ xcuserdata
 *.moved-aside
 DerivedData
 *.hmap
+*.ipa
 *.xcuserstate
 project.xcworkspace
 
@@ -31,6 +32,7 @@ local.properties
 
 # node.js
 #
+dist/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -38,6 +40,8 @@ yarn-error.log
 # BUCK
 buck-out/
 \.buckd/
+*.keystore
+!android/app/debug.keystore
 
 # fastlane
 #
@@ -49,15 +53,14 @@ buck-out/
 */fastlane/report.xml
 */fastlane/Preview.html
 */fastlane/screenshots
-*/fastlane/test_output/
 
 # Bundle artifact
 *.jsbundle
+.jest/
 
-# CocoaPods
-/ios/Pods/
+coverage/
+package-lock.json
 
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
+ios/Pods/
+
+.vscode

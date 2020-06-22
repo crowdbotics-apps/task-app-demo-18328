@@ -1,4 +1,9 @@
 {
-  "name": "task_app_demo_18328",
-  "displayName": "task_app_demo_18328"
+  "name": "TasksApp",
+  "displayName": "Tasks App",
+  "entryPoint": "index.js",
+  "packagerOpts": {
+    "assetExts": ["ttf", "png"],
+    "sourceExts": ["ts", "tsx"]
+  }
 }

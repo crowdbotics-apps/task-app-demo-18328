@@ -1,9 +1,13 @@
+import { AppRegistry, YellowBox } from 'react-native';
+import App from './src/App';
+
 /**
- * @format
+ * React Native 0.54 warning message ignore.
  */
+YellowBox.ignoreWarnings([
+  'Warning: componentWillMount is deprecated',
+  'Warning: componentWillReceiveProps is deprecated',
+  'Module RCTImageLoader',
+]);
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
-
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent('TasksApp', () => App);

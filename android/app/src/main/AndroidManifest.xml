@@ -1,12 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.task_app_demo_18328">
+  package="com.tasksapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
       android:name=".MainApplication"
@@ -15,11 +10,6 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/AppTheme">
-
-      <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyCA63HJpE1k9ExLBvLZaGeoBZ0yvoPlzsI"/>
-
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
