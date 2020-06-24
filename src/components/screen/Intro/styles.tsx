@@ -1,4 +1,5 @@
 import { StyleSheet } from 'react-native';
+import { getStatusBarHeight, getBottomSpace } from 'react-native-iphone-x-helper';
 
 const styles = StyleSheet.create({
   headerContainer: {
@@ -6,7 +7,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor: 'white',
-    marginVertical: 20,
+    marginTop: 20 + getStatusBarHeight(),
+    marginBottom: 20,
   },
   headerImgSection: {
     flex: 1,
@@ -23,7 +25,6 @@ const styles = StyleSheet.create({
   body: {
     flex: 1,
     backgroundColor: '#F4F5F9',
-    paddingHorizontal: 20,
   },
   slideView: {
     flex: 1,
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'white',
     borderRadius: 15,
+    marginHorizontal: 20,
   },
   introImg: {
     marginBottom: 30,
@@ -64,22 +66,11 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     margin: 5,
   },
-  buttonContainer: {
-    borderRadius: 10,
-    height: 46,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginVertical: 10,
-  },
-  buttonText: {
-    fontFamily: 'Avenir-Medium',
-    fontSize: 17,
-    color: 'white',
-  },
   changeLangContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginVertical: 7,
+    marginTop: 7,
+    marginBottom: 7 + getBottomSpace(),
   },
   changeLangText: {
     fontFamily: 'Avenir-Light',

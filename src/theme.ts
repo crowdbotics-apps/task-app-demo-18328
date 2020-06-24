@@ -10,7 +10,7 @@ const colors = {
   mediumGray: 'rgb(134,154,183)',
   paleGray: 'rgb(221,226,236)',
   lightBackground: 'white',
-  lightBackgroundLight: '#f7f6f3',
+  lightBackgroundLight: '#F4F5F9',
   darkBackground: '#323739',
   darkBackgroundLight: '#393241',
 };

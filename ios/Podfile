@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'TasksApp' do
-  # Pods for TasksApp
+target 'TaskMan' do
+  # Pods for TaskMan
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -38,7 +38,7 @@ target 'TasksApp' do
 
   pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
 
-  target 'TasksAppTests' do
+  target 'TaskManTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -46,10 +46,10 @@ target 'TasksApp' do
   use_native_modules!
 end
 
-target 'TasksApp-tvOS' do
-  # Pods for TasksApp-tvOS
+target 'TaskMan-tvOS' do
+  # Pods for TaskMan-tvOS
 
-  target 'TasksApp-tvOSTests' do
+  target 'TaskMan-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

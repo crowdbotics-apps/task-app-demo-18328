@@ -12,10 +12,8 @@ export interface User {
 }
 
 type StackParamList = {
-  default: undefined;
   Intro: { userId: string };
-  Privacy: undefined;
-  Terms: undefined;
+  Auth: { screenIndex: number };
 };
 
 export type DefaultNavigationProps<

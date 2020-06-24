@@ -1,16 +1,13 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Image, Text, TouchableOpacity, View } from 'react-native';
 import Swiper from 'react-native-swiper';
 import styled from 'styled-components/native';
 
 import { DefaultNavigationProps } from '../../../types';
 import styles from './styles';
-import Button from '../../shared/Button';
+import NativeButton from '../../shared/NativeButton';
 import { IC_CB_LOGO, IC_WELCOME_LOGO } from '../../../utils/Icons';
-import { SafeAreaView } from 'react-native-safe-area-context';
-// import { getString } from '../../STRINGS';
-// import { useThemeContext } from '../../providers/ThemeProvider';
 
 const Container = styled.View`
   flex: 1;
@@ -56,44 +53,54 @@ function Intro(props: Props): React.ReactElement {
 
   return (
     <Container>
-      <SafeAreaView>
-        <View style={styles.headerContainer}>
-          <View style={styles.headerImgSection}>
-            <Image
-              style={styles.headerImg}
-              resizeMode="contain"
-              source={IC_CB_LOGO} />
-          </View>
-          <View style={{ flex: 2 }}>
-            <Text style={styles.headerText}>Welcome</Text>
-          </View>
-          <View style={styles.headerImgSection} />
+      <View style={styles.headerContainer}>
+        <View style={styles.headerImgSection}>
+          <Image
+            style={styles.headerImg}
+            resizeMode="contain"
+            source={IC_CB_LOGO} />
         </View>
-        <View style={styles.body}>
-          <Swiper
-            ref={ref => (swiper = ref)}
-            horizontal
-            loop={false}
-            containerStyle={{ marginVertical: 30 }}
-            activeDotColor='#260868'
-            dotColor='#dedede'>
-            {renderPage()}
-            {renderPage()}
-            {renderPage()}
-            {renderPage()}
-          </Swiper>
-          <TouchableOpacity
-            style={[styles.buttonContainer, { backgroundColor: '#3ae1fe' }]}>
-            <Text style={styles.buttonText}>
-              Sign In
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={[styles.buttonContainer, { backgroundColor: '#260868' }]}>
-            <Text style={styles.buttonText}>
-              Sign Up
-            </Text>
-          </TouchableOpacity>
+        <View style={{ flex: 2 }}>
+          <Text style={styles.headerText}>Welcome</Text>
+        </View>
+        <View style={styles.headerImgSection} />
+      </View>
+      <View style={styles.body}>
+        <Swiper
+          ref={ref => (swiper = ref)}
+          horizontal
+          loop={false}
+          containerStyle={{ marginVertical: 30 }}
+          activeDotColor='#260868'
+          dotColor='#dedede'>
+          {renderPage()}
+          {renderPage()}
+          {renderPage()}
+          {renderPage()}
+        </Swiper>
+        <View style={{
+          paddingHorizontal: 20,
+        }}>
+          <NativeButton
+            onClick={() => {
+              props.navigation.navigate('Auth', { screenIndex: 0 });
+            }}
+            style={{
+              backgroundColor: '#3AE1FE',
+              marginVertical: 10,
+            }}
+            text='Log in'
+          />
+          <NativeButton
+            onClick={() => {
+              props.navigation.navigate('Auth', { screenIndex: 1 });
+            }}
+            style={{
+              backgroundColor: '#260868',
+              marginVertical: 10,
+            }}
+            text='Sign Up'
+          />
           <TouchableOpacity
             onPress={() => {
             }}
@@ -103,7 +110,7 @@ function Intro(props: Props): React.ReactElement {
             </Text>
           </TouchableOpacity>
         </View>
-      </SafeAreaView>
+      </View>
     </Container>
   );
 }

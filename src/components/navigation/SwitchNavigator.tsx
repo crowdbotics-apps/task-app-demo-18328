@@ -1,10 +1,9 @@
-import { NativeStackNavigationProp, createNativeStackNavigator } from '@react-navigation/native-stack';
-
-import Intro from '../screen/Intro/';
-import { NavigationContainer } from '@react-navigation/native';
-import Privacy from '../screen/Privacy';
 import React from 'react';
-import Terms from '../screen/Terms';
+import { NativeStackNavigationProp, createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
+
+import Intro from '../screen/Intro';
+import Auth from '../screen/Auth';
 import { useThemeContext } from '../../providers/ThemeProvider';
 
 const Stack = createNativeStackNavigator();
@@ -23,8 +22,7 @@ function RootNavigator(): React.ReactElement {
         }}
       >
         <Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} />
-        <Stack.Screen name="Privacy" component={Privacy} options={{ headerShown: false }} />
-        <Stack.Screen name="Terms" component={Terms} options={{ headerShown: false }} />
+        <Stack.Screen name="Auth" component={Auth} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

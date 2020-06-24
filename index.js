@@ -10,4 +10,4 @@ YellowBox.ignoreWarnings([
   'Module RCTImageLoader',
 ]);
 
-AppRegistry.registerComponent('TasksApp', () => App);
+AppRegistry.registerComponent('TaskMan', () => App);

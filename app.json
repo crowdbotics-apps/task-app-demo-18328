@@ -1,6 +1,6 @@
 {
-  "name": "TasksApp",
-  "displayName": "Tasks App",
+  "name": "TaskMan",
+  "displayName": "TaskMan",
   "entryPoint": "index.js",
   "packagerOpts": {
     "assetExts": ["ttf", "png"],
